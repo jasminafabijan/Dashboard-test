@@ -175,7 +175,7 @@
                                 <div class="amount">
                                     <span class="currency">&#x24;</span>1,535.00
                                 </div>
-                                <div class="due">Payment Due: 06 &#8260; 05 &#8260; 2025</div>
+                                <div class="due">Payment Due: <span>06 &#8260; 05 &#8260; 2025</span></div>
                             </div>
 
                             <div class="balance-col">
@@ -187,49 +187,50 @@
                             </div>
                         </div>
 
-      </div>
-    </main>
+                    </div>
+                </main>
 
-  </div><!-- .main -->
-</div><!-- .app -->
+            </div><!-- .main -->
+        </div><!-- .app -->
 
-<script>
-  /* Tab switcher */
-  function selectTab(btn) {
-    const tabs = btn.closest('.tabs').querySelectorAll('button');
-    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
-  }
+        <script>
+            /* Tab switcher */
+            function selectTab(btn) {
+                const tabs = btn.closest('.tabs').querySelectorAll('button');
+                tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+            }
 
-  /* Hamburger */
-  const hamburger = document.querySelector('.hamburger');
-  const sidebar   = document.querySelector('.sidebar');
-  const overlay   = document.querySelector('.overlay');
+            /* Hamburger */
+            const hamburger = document.querySelector('.hamburger');
+            const sidebar   = document.querySelector('.sidebar');
+            const overlay   = document.querySelector('.overlay');
 
-  function openMenu() {
-    sidebar.classList.add('open');
-    overlay.classList.add('open');
-    hamburger.classList.add('is-open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
+            function openMenu() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                hamburger.classList.add('is-open');
+                hamburger.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
 
-  function closeMenu() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
-    hamburger.classList.remove('is-open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+            function closeMenu() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
 
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.contains('open') ? closeMenu() : openMenu();
-  });
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.contains('open') ? closeMenu() : openMenu();
+            });
 
-  overlay.addEventListener('click', closeMenu);
-  sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-</script>
-</body>
+            overlay.addEventListener('click', closeMenu);
+            sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+        </script>
+
+    </body>
 </html>

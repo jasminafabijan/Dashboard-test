@@ -273,6 +273,10 @@ body {
     margin-top: 5px; 
 }
 
+.balance-col .due span { 
+    display: inline-block;
+}
+
 .summary-card .note  { 
     font-size: .75rem; 
     color: #949494; 
@@ -309,7 +313,7 @@ body {
     font-size: 1.25rem; 
     font-weight: 500; 
     line-height: 1.3;
-    margin-bottom: 10px; 
+    margin-bottom: 12px; 
 }
 
 .balance-list { 
@@ -372,7 +376,7 @@ span.currency {
     .sidebar {
         position: fixed;
         top: 0; left: 0; bottom: 0;
-        width: 220px;
+        width: 160px;
         z-index: 100;
         transform: translateX(-100%);
         transition: transform .28s cubic-bezier(.4,0,.2,1);
@@ -386,12 +390,27 @@ span.currency {
         transform: translateX(0); 
     }
 
+    .sidebar-nav {
+        margin-top: 54px
+    }
+
     .overlay { 
         display: block; 
     }
 
     .app { 
         flex-direction: column; 
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .main {
+        overflow: visible;
+    }
+
+    .content {
+        overflow: visible;
     }
 
     .mobile-header {
@@ -399,10 +418,12 @@ span.currency {
         align-items: center;
         justify-content: space-between;
         background: var(--navy);
-        padding: 14px 18px;
+        padding: 7px 18px;
         flex-shrink: 0;
         position: relative;
         z-index: 101;
+        position: sticky;
+        top: 0;
     }
 
     .mobile-header .logo {
@@ -417,30 +438,30 @@ span.currency {
         cursor: pointer;
         display: flex; 
         flex-direction: column; 
-        gap: 5px;
+        gap: 3px;
         position: relative; 
         z-index: 101;
     }
 
     .hamburger span {
         display: block; 
-        width: 22px; 
+        width: 18px; 
         height: 2px;
         background: var(--white); 
-        border-radius: 2px;
         transition: transform .25s, opacity .25s;
     }
 
     .hamburger.is-open span:nth-child(1) { 
-        transform: translateY(7px) rotate(45deg); 
+        transform: translateY(5px) rotate(45deg); 
     }
 
     .hamburger.is-open span:nth-child(2) { 
         opacity: 0; 
+        transform: scaleX(0);
     }
 
     .hamburger.is-open span:nth-child(3) { 
-        transform: translateY(-7px) rotate(-45deg); 
+        transform: translateY(-5px) rotate(-45deg); 
     }
 
     .avatar-btn { 
@@ -459,14 +480,28 @@ span.currency {
         margin-right: 0;
     }
 
-    .topbar { padding: 0 16px; height: 50px; }
-    .topbar-right { display: none; }
+    .topbar { 
+        padding: 0 16px; 
+        height: 50px; 
+        position: sticky;
+        top: 42px;
+    }
 
-    .content { padding: 20px 16px; }
+    .topbar-right { 
+        display: none; 
+    }
+
+    .content { 
+        padding: 20px 18px; 
+    }
+
     .page-title { 
         font-size: 1.75rem; 
         margin-bottom: 20px; 
     }
-    .balance-col .amount { font-size: 1.4rem; }
-    .btn-pay { width: 100%; text-align: center; }
+
+    .btn-pay { 
+        width: 100%; 
+        text-align: center; 
+    }
 }
