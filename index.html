@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Logos – Balance</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="app">
+
+            <div class="overlay" aria-hidden="true"></div>
+
+            <!-- Mobile header (hidden on desktop/tablet) -->
+            <header class="mobile-header">
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <span class="logo">Logos</span>
+                <button class="avatar-btn" aria-label="Profil">
+                    <img src="icons/user-white.svg" alt="User">
+                </button>
+            </header>
+
+            <nav class="sidebar" aria-label="Main navigation">
+                <div class="sidebar-logo">Logos</div>
+                <div class="sidebar-nav">
+                    <a href="#">Communicate</a>
+                    <a href="#">Schedule</a>
+                    <a href="#">Grades</a>
+                    <a href="#">Attendance</a>
+                    <a href="#">Counseling</a>
+                    <a href="#">Alerts</a>
+                    <a href="#">Transcript</a>
+                    <a href="#">Re&#8209;Enroll</a>
+                    <a href="#" class="active">Billing</a>
+                    <a href="#">Service Hours</a>
+                </div>
+            </nav>
+
+            <!-- Main area -->
+            <div class="main">
+
+                <!-- Top bar -->
+                <div class="topbar">
+                    <div class="tabs" role="tablist" aria-label="Billing sections">
+                        <button role="tab" aria-selected="true" class="active" onclick="selectTab(this)">Balance</button>
+                        <button role="tab" aria-selected="false" onclick="selectTab(this)">Statements</button>
+                        <button role="tab" aria-selected="false" onclick="selectTab(this)">AutoPay</button>
+                    </div>
+
+                    <div class="topbar-right">
+                        <button aria-label="Print">
+                            <img src="icons/print.svg" alt="Print">
+                            Print
+                        </button>
+
+                        <button aria-label="User profile">
+                            <img src="icons/user.svg" alt="User">
+                            Bartho…
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <main class="content" id="balance-tab">
+                    <h1 class="page-title">Balance</h1>
+
+                    <div class="balance-grid">
+
+                        <div class="balance-section">
+                            <h2>Total Outstanding Balances</h2>
+                            <table class="balance-list" aria-label="Outstanding balances">
+                                <tbody>
+                                    <tr>
+                                        <td>Enrollment &#8260; Registration Fees</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Field Trips 6th Grade</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday School</td>
+                                        <td class="positive">
+                                            <span class="currency">&#x24;</span>1,602.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sports Fee Football</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuition</td>
+                                        <td class="positive">
+                                            <span class="currency">&#x24;</span>5,768.00
+                                        </td>
+                                        </tr>
+                                    <tr>
+                                        <td>Sports Fees</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sports Fees</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday School Payment</td>
+                                        <td class="credit">
+                                            &#8209;<span class="currency">&#x24;</span>930.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multi&#8209;Child Discount</td>
+                                        <td class="credit">
+                                            &#8209;<span class="currency">&#x24;</span>289.50
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Registration Fees</td>
+                                        <td class="zero">
+                                            <span class="currency">&#x24;</span>0.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuition Payment</td>
+                                        <td class="credit">
+                                            &#8209;<span class="currency">&#x24;</span>2505.50
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>Summary</h2>
+                            <table class="balance-list" aria-label="Summary">
+                                <tbody>
+                                    <tr>
+                                        <td>Statement Balance</td>
+                                        <td class="positive">
+                                            <span class="currency">&#x24;</span>1,535.00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Right: payment card -->
+                        <div class="summary-card">
+                            <div class="balance-col">
+                                <label>Total Balance</label>
+                                <div class="amount">
+                                    <span class="currency">&#x24;</span>1,535.00
+                                </div>
+                            </div>
+
+                            <div class="balance-col">
+                                <label>Remaining Balance</label>
+                                <div class="amount">
+                                    <span class="currency">&#x24;</span>1,535.00
+                                </div>
+                                <div class="due">Payment Due: 06 &#8260; 05 &#8260; 2025</div>
+                            </div>
+
+                            <div class="balance-col">
+                                <p class="note">If you are making a one time payment for something, please add a note.</p>
+                            </div>
+
+                            <div class="balance-col">
+                                <button class="btn-pay" type="button">Go to Payment</button>
+                            </div>
+                        </div>
+
+      </div>
+    </main>
+
+  </div><!-- .main -->
+</div><!-- .app -->
+
+<script>
+  /* Tab switcher */
+  function selectTab(btn) {
+    const tabs = btn.closest('.tabs').querySelectorAll('button');
+    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  /* Hamburger */
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar   = document.querySelector('.sidebar');
+  const overlay   = document.querySelector('.overlay');
+
+  function openMenu() {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  overlay.addEventListener('click', closeMenu);
+  sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
+</body>
+</html>
