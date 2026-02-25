@@ -19,15 +19,6 @@
   
 @font-face {
     font-family: 'Gibson';
-    src: url('fonts/Gibson-Regular.woff2') format('woff2'),
-         url('fonts/Gibson-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-  
-@font-face {
-    font-family: 'Gibson';
     src: url('fonts/Gibson-Medium.woff2') format('woff2'),
          url('fonts/Gibson-Medium.woff') format('woff');
     font-weight: 500;
@@ -42,6 +33,13 @@
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: 
+    url("https://db.onlinewebfonts.com/t/41a37b5ce5c3e0b6200b09e4f6e8b5e5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41a37b5ce5c3e0b6200b09e4f6e8b5e5.woff")format("woff");
 }
 
 html, 
@@ -69,7 +67,7 @@ body {
 }
 
 .sidebar-logo {
-    padding-top: 16px;
+    padding-top: 20px;
     padding-left: 26px;
     font-size: 2.5rem;
     font-weight: 600;
@@ -94,6 +92,7 @@ body {
     padding: 8px 18px;
     border-radius: 8px;
     transition: background .15s, color .15s;
+    margin-bottom: 4px;
 }
 
 .sidebar-nav a:hover  { 
@@ -147,7 +146,7 @@ body {
     background: linear-gradient(0deg, rgba(118, 118, 128, 0.12), rgba(118, 118, 128, 0.12)), #FFFFFF;
     border-radius: 10px;
     padding: 2px;
-    gap: 2px;
+    gap: 4px;
     width: 567px;
     height: 40px;
     margin-right: 16px;
@@ -174,7 +173,8 @@ body {
 }
     
 .tabs button:hover:not(.active) { 
-    color: var(--text); 
+    background: rgba(118, 118, 128, 0.12);
+    border-radius: 8px;
 }
 
 .topbar-right { 
@@ -221,7 +221,7 @@ body {
     font-size: 2rem; 
     font-weight: 600;
     line-height: 1.25;
-    margin-bottom: 26px; 
+    margin-bottom: 24px; 
 }
 
 .balance-grid {
@@ -242,7 +242,6 @@ body {
     max-width: 466px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
 }
 
 .summary-card .balance-col {
@@ -256,7 +255,7 @@ body {
     letter-spacing: .25px;
     line-height: 20px;
     display: block; 
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
     
 .balance-col .amount { 
@@ -300,13 +299,23 @@ body {
     border-radius: 50px;
 }
 
+.btn-pay:focus,
+.btn-pay:hover {
+    border: 0.5px solid rgba(148, 148, 148, 0.75);
+    box-shadow: 0px 0.5px 2.5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-pay:focus {
+    background: linear-gradient(357.03deg, #005890 2.66%, #2A78A8 109.42%);
+}
+
 .btn-pay:hover { 
-    background: #005890; 
+    background: linear-gradient(357.03deg, #004875 2.66%, #005890 109.42%);
 }
 
 /* ── BALANCE TABLE ── */
 .balance-section {
-    padding-right: 36px;
+    padding-right: 32px;
 }
 
 .balance-section h2 { 
@@ -323,23 +332,19 @@ body {
 }
 
 .balance-list td { 
-    padding: 7px 0; 
+    padding: 5px 0; 
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 .balance-list td:last-child { 
     text-align: right; 
     font-weight: 500; 
     letter-spacing: 0.15px;
-    line-height: 1.2;
 }
 
 .zero { 
     color: var(--muted); 
-}
-
-span.currency {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-right: 1px;
 }
 
 .positive { 
