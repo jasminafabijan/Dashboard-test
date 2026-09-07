@@ -10,11 +10,13 @@
     --navy:   #002942;
     --blue-btn: #1b6cbf;
     --blue-active: #005890;
-    --green:  #138000;
+    --green:  #117300;
     --text:   #282828;
     --text-gray:  #4d4d4d;
     --muted:  #949494;
     --white:  #ffffff;
+    --bg-main: #E8E8E8;
+    --surface: var(--white);
 }
   
 @font-face {
@@ -47,8 +49,8 @@ body {
     height: 100%; 
     font-family: 'Gibson', sans-serif; 
     font-weight: 400;
-    color: var(--text); 
-    background: var(--white); 
+    color: var(--text);
+    background: var(--bg-main);
 }
 
 .app { 
@@ -211,10 +213,11 @@ body {
 }
 
 /* ── CONTENT ── */
-.content { 
-    flex: 1; 
-    overflow-y: auto; 
-    padding: 24px; 
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    background: var(--bg-main);
 }
 
 .page-title { 
@@ -235,7 +238,8 @@ body {
 
 /* ── SUMMARY CARD ── */
 .summary-card {
-    background: #F5F5F5;
+    background: var(--surface);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 16px;
     gap: 16px;
